@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* 
    ======================================
     ÁREA GERAL DA PÁGINA DE AUTENTICAÇÃO
@@ -111,30 +110,3 @@
     padding: 8px 14px;
     border-radius: 8px;
 }
-
-=======
-/* ==========================
-    ÁREA GERAL DA PÁGINA DE AUTENTICAÇÃO
-   ==========================
-*/
-
-/* Espaçamento interno na página de login/cadastro 
-40 = acima 20= laterais*/
-.pagina-auth {
-    padding: 40px 20px;
-}
-
-/* ==========================
-    BLOCO PRINCIPAL DO FORMULÁRIO
-   ==========================
-*/
-
-.bloco-auth {
-    max-width: 500px; /* Largura máxima  */
-    margin: 0 auto; /* Centraliza horizontalmente na página*/;
-    background-color: white;
-    padding: 30px ;/*Espaçamento interno*/
-    border-radius: 8px; /* Arredonda os cantos*/
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
->>>>>>> 413a275 (Atualizando projeto TechEduca completo)

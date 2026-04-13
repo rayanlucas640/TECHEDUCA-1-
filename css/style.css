@@ -179,28 +179,16 @@ footer a {
   }
 
   .curso{
-<<<<<<< HEAD
     max-width: 600px; /* limite da largura */
     margin: 0 auto; /* centraliza horizontalmente */
     padding: 20px; /* espaço interno */
     background: #fff; /* cor de fundo */
     border-radius: 8px; /* borda com cantos arrendondados */
-=======
-    max-width: 600px;       /* limite da largura */
-    margin: 0 auto;        /* centraliza horizontalmente */
-    padding: 20px;        /* espaço interno */
-    background: #fff;  /* cor de fundo */ 
-    border-radius: 8px;  /* borda com cantos arredondados */ 
->>>>>>> 413a275 (Atualizando projeto TechEduca completo)
   }
 }
 
 @media (max-width: 480px){
-<<<<<<< HEAD
   h1 {
-=======
-  h1{
->>>>>>> 413a275 (Atualizando projeto TechEduca completo)
     font-size: 28px;
   }
 
@@ -211,10 +199,7 @@ footer a {
   form{
     padding: 0 10px;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 413a275 (Atualizando projeto TechEduca completo)
 }
 
 /* ======= CARDS DE DESTAQUE ======= */
