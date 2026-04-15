@@ -26,7 +26,7 @@ const app = express();
 const listOrigins = [
     "http://localhost:5501", // ambiente local (live server)
     "http://127.0.0.1:5501", // variação de localhost
-    "https://user.github.io" // dominio do frontend em produção
+    "https://rayanlucas640.github.io." // dominio do frontend em produção
 ]
 
 // 8. Ativa o CORS - libera a comunicação entre front-end e back-end
@@ -78,12 +78,27 @@ app.use(session(sessionConfig)) // configura a sessão no servidor
 // 1. Define a rota POST "/mensagem"
 // Quando o formulário enviar os dados para /mensagem, essa função roda
 app.post("/mensagem", (req,res) => {
+    try{
      //7. req.body contém os dados enviados pelo formulário
         //(nome,email, mensagem)
-    console.log(req.body); // mostra os dados no terminal
+    const nome = req.body.nome;
+    const email = req.body.email;
+    const mensagem = req.body.mensagem;
 
-    //8. Envia uma mensagem de volta para o navegador
+    // 8. Valida se as variaveis estão preenchidas
+    if(!nome || !email || !mensagem){
+        return res.status(400).json({mensagem : "Preencha todos os campos"});
+    }
+    //9. Faz o comando SQL de inserção
+    pool.execute("INSERT INTO tb_mensagem(nome,email,mensagem) VALUES(?,?,?)",[nome, email, mensagem]);
+    //10. O servidor envia uma mensagem de volta no formato json
+    res.status(201).json({mensagem: "Mensagem enviada com sucesso!"})
+
+    //11. Envia uma mensagem de volta para o navegador
     res.send("Mensagem recebida com sucesso!");
+    } catch(error){
+        console.erro(error);
+    }
 });
 
 // 2. Define a rota POST "/cadastro"
